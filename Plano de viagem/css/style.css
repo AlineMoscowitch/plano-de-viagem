@@ -1,0 +1,306 @@
+:root {
+    --cor-primaria: #257DA5;
+    --cor-secundaria: #385B6B;
+    --cor-light: #7CCAEE;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/***********
+*   HOME
+***********/
+
+.home .header {
+    position: relative;
+    padding: 30px;
+    background: var(--cor-primaria);
+    box-shadow: 0 0 20px black;
+
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.home .banner img {
+    width: 100%;
+    height: 90vh;
+}
+
+
+
+
+/***********
+* PAGE 2
+***********/
+
+.page2 {
+    padding: 50px 0;
+    background: var(--cor-primaria);
+    color: white;
+    margin-top: -10px;
+
+}
+
+.page2 h1, h2{
+    text-align: center;
+}
+
+
+.page2 .lampada {
+    width: 0px;
+    /* RESOLVER ESSE PEPINO (CENTRALIZAR)*/
+    margin-bottom: 50px;
+}
+
+/***********
+* GRID-CONTAINER
+***********/
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 300px 400px 300px;
+    justify-content: space-evenly;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+}  
+
+
+.item img {
+    width: 400px;
+}
+
+
+/* BOX1 PASSOS */
+.passos {
+    border: 1px solid black;
+    background-image: url(../img/background-box.jpg);
+    background-size: cover;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px white;
+
+}
+
+.passos .overlay1 {
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* ALTERAÇOES DAS LISTAS*/
+.passos .navbar ul li,
+.dicas .navbar ul li {
+    list-style: none;
+    margin: 10px;
+
+}
+
+
+/* BOX2 DICAS*/
+.dicas {
+    background-image: url(../img/background-box2.jpg);
+    background-size: cover;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px white;
+}
+
+.dicas .overlay2 {
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    padding: 10px;
+    
+}
+
+@media (max-width:500px) {
+    .home .banner img {
+        height: 30vh;
+    }
+    
+    .grid-container {
+        grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+        max-width: 500px;
+    }
+
+    .passos,.dicas {
+        margin: 50px;
+    }
+    
+    .item img {
+        display: none;
+    }
+
+}
+
+
+
+/***********
+* Pag3
+***********/
+.page3{
+    background: var(--cor-secundaria);
+    height: 100vh;
+    padding: 50px 0;
+}
+
+.page3 .continente {
+    margin-left: 50px;
+}
+
+.page3 .continente .navbar {
+    width: 82px;
+}
+
+.page3 .continente .navbar ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 5px;
+    margin: 5px 0;
+    background-color: rgb(19, 18, 18);
+    justify-content: center;
+    border-radius: 5px;
+}
+
+
+.page3 .continente .navbar ul li a {
+    text-decoration: none;
+    padding: 5px 20px;
+    color: white;
+    display: block;
+
+}
+
+
+.page3 .continente .submenu {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    background: brown;
+}
+
+
+
+
+
+.page3 .continente .navbar > ul li:hover >.submenu {
+    display: block;
+}
+
+
+
+
+
+
+
+
+/***********
+* Pag4
+***********/
+
+.page4 {
+    background: var(--cor-primaria);
+    color: white;
+    height: 100vh;
+}
+
+
+.page4 h3, h5{
+    padding-top: 50px;
+    text-align: center;
+}
+
+.curiosidades {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    margin: 50px 100px;
+    justify-content: space-evenly;
+
+    max-width: 1250px;
+}
+
+.curiosidades ul li {
+    list-style: none;
+    margin: 5px;
+}
+
+.overlay3 {
+    background-image: url(../img/overlay3.jpg);
+    background-size: cover;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px white;
+}
+
+.navbar1 {
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.overlay4 {
+    background-image: url(../img/overlay4.jpg);
+    background-size: cover;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 30px white;
+}
+
+.navbar2 {
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width:500px) {
+    .page4 {
+        height: auto;
+    }
+
+    .curiosidades {
+        grid-template-columns: repeat(auto-fit,minmax(400px,auto));
+        max-width: 500px;
+    }
+
+    .overlay3,.overlay4 {
+        margin: 50px;
+    }
+
+    .page5 {
+        margin-top: -50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page5{
+    background: var(--cor-secundaria);
+    height: 100vh;
+}
